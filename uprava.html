@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uprava</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: white;
+}
+/* linkovi */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+.main-nav img {
+    width: 225px;
+    height: 95px;
+    margin-left: 60px;
+}
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+.nav-links a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+.index{color: black;}
+.onama{color: black;}
+.uprava{color: black;}
+.projekti{color: black;}
+.natjecaji{color: black;}
+.maps{color: black;}
+.kontakti{
+    background-color: darkred;
+    color: white;
+    padding: 4px 14px;
+    border-radius: 5px;
+}
+/* naslov1 */
+.naslov-prvi{
+    text-align: center;
+    font-size: 35px;
+    color: #888;
+}
+/* ravnatelj */
+.ravnatelj {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100px;
+}
+.slika {
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 400px;
+}
+.slika img {
+    max-width: 100%;
+    max-height: 90%;
+}
+.tekst {
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 400px;
+    text-align: center;
+}
+.tekst h1 {
+    font-size: 50px;
+    margin-top: 0px;
+}
+.tekst h2 {
+    font-size: 50px;
+    color: #ccc;
+    margin-top: 0px;
+}
+.contact-info {
+    margin-top: 0px;
+    line-height: 4;
+    color: black;
+}
+/* naslov2 */
+.naslov-drugi{
+    text-align: center;
+    font-size: 35px;
+    color: #888;
+}
+/* Psiholog i pedagog */
+.psiholog-pedagog{
+    margin-left: 400px;
+    padding-right: 40px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin-left: 350px;
+    margin-right: 300px;
+}
+.card h1 {
+    font-size: 50px;
+    margin-top: 0px;
+}
+.card h2 {
+    font-size: 50px;
+    color: #ccc;
+    margin-top: 0;
+}
+.card .info {
+    margin-top: 0px;
+    line-height: 4;
+    color: black;
+    margin-bottom: 100px;
+}
+/* voditelj praktične nastave */
+.voditelj {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100px;
+}
+.slika {
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 400px;
+}
+.slika img {
+    max-width: 100%;
+    max-height: 90%;
+}
+.tekst {
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 400px;
+    text-align: center;
+}
+.tekst h1 {
+    font-size: 50px;
+    margin-top: 0px;
+}
+.tekst h2 {
+    font-size: 50px;
+    color: #ccc;
+    margin-top: 0px;
+}
+.contact-info {
+    margin-top: 0px;
+    line-height: 4;
+    color: black;
+}
+/* naslov3 */
+.naslov-treci{
+    color: darkred;
+    text-align: center;
+    font-size: 20px;
+}
+.Predsjednik{
+    color: black;
+    text-align: center;
+    font-size: 20px;
+}
+.imena{
+    color: #ccc;
+    text-align: center;
+    font-size: 20px;
+}
+.članovi{
+    color: black;
+    text-align: center;
+    font-size: 20px;
+}
+/* Footer */
+footer{
+    text-align: center;
+}
+footer a{
+    color: #888;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+}
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+  .main-nav img {
+    margin-left: 0;
+    width: 150px;
+    height: auto;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .naslov-prvi h1,
+  .naslov-drugi h1,
+  .naslov-treci h1 {
+    font-size: 28px;
+    padding: 0 10px;
+  }
+  .ravnatelj,
+  .voditelj {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .slika,
+  .tekst {
+    padding: 20px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .tekst h1,
+  .tekst h2 {
+    font-size: 30px;
+  }
+  .contact-info {
+    font-size: 16px;
+    line-height: 2;
+  }
+  .psiholog-pedagog {
+    margin-left: 0;
+    padding-right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .psiholog-pedagog img {
+    width: 80%;
+    margin: 10px 0;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    margin: 0 20px;
+  }
+  .card h1,
+  .card h2 {
+    font-size: 28px;
+  }
+  .info {
+    font-size: 16px;
+    line-height: 2;
+  }
+  .Predsjednik,
+  .članovi,
+  .imena {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+  footer .link {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  footer a {font-size: 16px;}
+}
+</style>
+</head>
+<body>
+    <nav class="main-nav">
+        <img src="ssklivno_logo_2022.png" alt="Logo škole">
+        <div class="nav-links">
+            <a href="index.html" class="index">Početna</a>
+            <a href="onama.html" class="onama">O nama</a>
+            <a href="uprava.html" class="uprava">Uprava</a>
+            <a href="projekti.html" class="projekti">Projekti</a>
+            <a href="natjecaji.html" class="natjecaji">Natječaji i objave</a>
+            <a href="https://maps.app.goo.gl/sshsnftJou4t5jF17" class="maps">SSK 360</a>
+            <a href="kontakti.html" class="kontakti">KONTAKTI</a>
+        </div>
+    </nav>
+    <header>
+        <div class="naslov-prvi">
+            <h1>Uprava škole</h1>
+        </div>
+    </header>
+    <div class="ravnatelj">
+        <div class="slika">
+            <img src="Snimka zaslona 2025-06-03 230833.png" alt="Saša Grabovac za stolom">
+        </div>
+        <div class="tekst">
+            <h1>Ravnatelj</h1>
+            <h2>Saša Grabovac</h2>
+            <div class="contact-info">
+                <div>e-mail: <strong>ravnatelj@ssklivno.net</strong></div>
+                <div>mob.: <strong>+387 63 990 305</strong></div>
+                <div>tel.: <strong>+387 34 201 580</strong></div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <header>
+        <div class="naslov-drugi">
+            <h1>Stručna služba</h1>
+        </div>
+    </header>
+    <div>
+        <img src="Snimka zaslona 2025-06-03 234040.png" alt="" class="psiholog-pedagog"> <img src="Snimka zaslona 2025-06-03 234144.png" alt="">
+    </div>
+    <div class="container">
+        <div class="card">
+            <h1>Psiholog</h1>
+            <h2>Josip Gunjača</h2>
+            <div class="info">
+                <div>e-mail:<strong>psiholog@ssklivno.net</strong></div>
+                <div>mob.: <strong>+387 63 453 478</strong></div>
+                <div>tel.: <strong>+387 34 208 173</strong></div>
+            </div>
+        </div>
+        <div class="card">
+            <h1>Pedagog</h1>
+            <h2>Darko Perković</h2>
+            <div class="info">
+                <div>e-mail:<strong>pedagog@ssklivno.net</strong></div>
+                <div>mob.: <strong>+387 63 501 156</strong></div>
+                <div>tel.: <strong>+387 34 201 943</strong></div>
+           </div>
+       </div>
+    </div>
+    <div class="voditelj">
+        <div class="slika">
+            <img src="Snimka zaslona 2025-06-04 001701.png" alt="Antić Vidović za stolom">
+        </div>
+        <div class="tekst">
+            <h1>Voditelj praktične <br> nastave</h1>
+            <h2>Antić Vidović</h2>
+            <div class="contact-info">
+                <div>e-mail: <strong>anticvidovic@ssklivno.net</strong></div>
+                <div>mob.: <strong>+387 63 422 652</strong></div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <header>
+        <div class="naslov-treci">
+            <h1>Školski odbor</h1>
+        </div>
+        <div><h1 class="Predsjednik">Predsjednik školskog odbora:</h1></div>
+        <br>
+        <div><h1 class="imena">Tomislav Kelava</h1></div>
+        <br>
+        <div><h1 class="članovi">Članovi školskog odbora:</h1></div>
+        <br>
+        <div>
+            <h1 class="imena">Adin Lemo</h1>
+            <br>
+            <h1 class="imena">Darko Perković</h1>
+            <br>
+            <h1 class="imena">Tonka Perković</h1>
+            <br>
+            <h1 class="imena">Tonini Grabovac</h1>
+            <br>
+        </div>
+    </header>
+    <footer>
+        <div class="link">
+            <a href="kontakti.html">Kontakti</a>
+            <a href="natjecaji.html">Natječaji i objave</a>
+            <a href="onama.html">O nama</a>
+            <a href="index.html">Početna</a>
+            <a href="onama.html">Pravila pisanja završnog rada</a>
+            <a href="projekti.html">Projekti</a>
+            <a href="onama.html">Struke i zanimanja</a>
+            <a href="uprava.html">Uprava</a>
+        </div>
+    </footer>
+</body>
+</html>
